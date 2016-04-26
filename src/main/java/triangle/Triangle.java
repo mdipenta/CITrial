@@ -18,7 +18,7 @@ public class Triangle {
 			trian = trian + 1;
 		if (a == c)
 			trian = trian + 2;
-		if (b == c)
+		if (b != c)
 			trian = trian + 3;
 		if (trian == 0)
 			if (a + b < c || a + c < b || b + c < a)
