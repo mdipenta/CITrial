@@ -1,4 +1,13 @@
 apply plugin: 'java'
+apply plugin: 'jacoco'
+apply plugin: 'findbugs'
+apply plugin: 'pmd'
+apply plugin: 'checkstyle'
+
+checkstyle {
+       configFile = new File(rootDir, "config/checkstyle/checkstyle.xml")
+       toolVersion = '6.17'
+    }
 
 
 
@@ -11,3 +20,30 @@ dependencies {
 }
 
 
+
+  tasks.withType(FindBugs) {
+    reports {
+        xml.enabled = false
+        html.enabled = true
+    }
+}
+
+
+
+
+
+jacocoTestReport {
+         group = "Reporting"
+         description = "Generate Jacoco coverage reports after running tests."
+         reports {
+                xml{
+                    enabled true
+                    destination "${buildDir}/reports/jacoco/jacoco.xml"
+                }
+                csv.enabled false
+                html{
+                    enabled true
+                    destination "${buildDir}/reports/jacocoHtml"
+                }
+        }
+}
