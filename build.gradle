@@ -1,13 +1,28 @@
-apply plugin: 'java'
-apply plugin: 'jacoco'
-apply plugin: 'findbugs'
-apply plugin: 'pmd'
-apply plugin: 'checkstyle'
-
-checkstyle {
-       configFile = new File(rootDir, "config/checkstyle/checkstyle.xml")
-       toolVersion = '6.17'
+buildscript {
+    repositories {
+        jcenter()
     }
+    dependencies {
+        classpath 'com.palantir:jacoco-coverage:0.3.0'
+    }
+}
+
+
+apply plugin: 'java'
+apply plugin: 'com.palantir.jacoco-coverage'
+
+
+
+
+
+jacocoCoverage {
+    // Enforce minimum code coverage of 50% for every Java file.
+    fileThreshold 0.5
+
+    // Whitelist files named MyClass.java from coverage requirements.
+    //fileThreshold 0.0, "Triangle.java"
+}
+
 
 
 
@@ -21,29 +36,3 @@ dependencies {
 
 
 
-  tasks.withType(FindBugs) {
-    reports {
-        xml.enabled = false
-        html.enabled = true
-    }
-}
-
-
-
-
-
-jacocoTestReport {
-         group = "Reporting"
-         description = "Generate Jacoco coverage reports after running tests."
-         reports {
-                xml{
-                    enabled true
-                    destination "${buildDir}/reports/jacoco/jacoco.xml"
-                }
-                csv.enabled false
-                html{
-                    enabled true
-                    destination "${buildDir}/reports/jacocoHtml"
-                }
-        }
-}
