@@ -25,7 +25,7 @@ dependencies{
 
 jacocoCoverage {
     // Enforce minimum code coverage of 50% for every Java file.
-    fileThreshold LINE 0.4
+    fileThreshold  0.5 LINE
 
     // Whitelist files named MyClass.java from coverage requirements.
     //fileThreshold 0.0, "Triangle.java"
