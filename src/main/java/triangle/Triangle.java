@@ -26,7 +26,8 @@ public class Triangle {
 			else
 				return TriangleType.SCALENE;
 		if (trian > 3)
-			return TriangleType.EQUILATERAL;
+			//return TriangleType.EQUILATERAL;
+            return TriangleType.SCALENE;
 		if (trian == 1 && a + b > c)
 			return TriangleType.ISOSCELES;
 		else if (trian == 2 && a + c > b)
