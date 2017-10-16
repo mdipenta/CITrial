@@ -1,1 +1,4 @@
 language: java
+
+notification:
+	on_success: always
