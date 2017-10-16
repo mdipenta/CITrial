@@ -1,5 +1,5 @@
 language: java
 
-notification:
+notifications:
    email:
 	on_success: always
