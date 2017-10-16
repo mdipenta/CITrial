@@ -1,4 +1,5 @@
 language: java
 
 notification:
+   email:
 	on_success: always
