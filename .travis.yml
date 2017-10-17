@@ -4,11 +4,7 @@ notifications:
    email:
    on_success: always
 
-
-
-
 jobs:
-language: java	
   include:
     if: branch = master
     script: gradle build
