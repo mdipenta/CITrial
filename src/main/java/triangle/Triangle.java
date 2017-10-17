@@ -3,9 +3,9 @@ package triangle;
 public class Triangle {
 
 	public static enum TriangleType {
-		INVALID, 
+		INVALID,
         SCALENE, 
-        EQUILATERAL, 
+        EQUILATERAL, //help
         ISOSCELES;
 	};
 	
