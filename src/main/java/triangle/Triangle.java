@@ -5,12 +5,13 @@ public class Triangle {
 	public static enum TriangleType {
 		INVALID,
         SCALENE, 
-        EQUILATERAL, 
+        EQUILATERAL,
         ISOSCELES;
 	};
 	
 	public static TriangleType classify(int a, int b, int c) {
-		int trian; 
+		int trian;
+        System.out.println("ciao");
 		if (a <= 0 || b <= 0 || c <= 0)
 			return TriangleType.INVALID;
 		trian = 0;
