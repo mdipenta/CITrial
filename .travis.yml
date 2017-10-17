@@ -2,9 +2,6 @@ language: java
 
 notifications:
    email:
-   on_success: always
+     on_success: always
+     on_failure: always
 
-jobs:
-  include:
-    if: branch = master
-    script: gradle build
