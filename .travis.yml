@@ -9,8 +9,5 @@ notifications:
 
 jobs:
   include:
-    - stage: compile
-    - script: gradle compileJava
-    - stage: test
     if: branch = master
-    - script: gradle test
+    script: gradle build

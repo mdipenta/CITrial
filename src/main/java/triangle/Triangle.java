@@ -5,7 +5,7 @@ public class Triangle {
 	public static enum TriangleType {
 		INVALID,
         SCALENE, 
-        EQUILATERAL, //help
+        EQUILATERAL, 
         ISOSCELES;
 	};
 	
