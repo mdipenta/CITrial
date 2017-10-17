@@ -12,4 +12,5 @@ jobs:
     - stage: compile
     - script: gradle compileJava
     - stage: test
-      script: gradle test
+    - if branch=master
+    - script: gradle test
