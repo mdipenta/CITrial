@@ -12,7 +12,7 @@ dependencies {
 }
 
    findbugs {
-        ignoreFailures = true
+        ignoreFailures = false
         sourceSets = [sourceSets.main]
    }
 
@@ -24,6 +24,7 @@ dependencies {
 }
 
 checkstyle {
+       ignoreFailures = false
        configFile = new File(rootDir, "config/checkstyle/checkstyle.xml")
        toolVersion = '6.17'
     }
