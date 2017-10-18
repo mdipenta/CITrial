@@ -22,7 +22,6 @@
     <!-- See http://checkstyle.sf.net/config_whitespace.html -->
         <module name="FileTabCharacter">
           <property name="eachLine" value="true"/>
-	  	  <property name="severity" value="error"/>
         </module>
 
     <module name="TreeWalker">
