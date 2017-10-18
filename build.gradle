@@ -12,5 +12,5 @@ dependencies{
 
 
 check.doFirst{
-    println "Variable", System.getenv("FOO");
+    println "Variable", System.getenv("FOO")
 }
