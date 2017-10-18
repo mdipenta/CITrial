@@ -9,9 +9,3 @@ dependencies{
     testCompile group: 'junit', name: 'junit', version: '4.2'
 }
 
-
-foo=ENV['FOO']
-
-assemble.doFirst{
-    println 'Variable', foo
-}
