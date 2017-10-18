@@ -4,3 +4,9 @@ jdk:
   - oraclejdk8
   - oraclejdk9
   - openjdk7
+
+
+env:
+  - FOO=1
+  - FOO=2
+  - FOO=3
