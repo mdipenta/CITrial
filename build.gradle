@@ -10,5 +10,5 @@ dependencies{
 }
 
 build.doFirst{
-  println System.getenv("PATH")
+  println System.getenv("FOO")
 }
