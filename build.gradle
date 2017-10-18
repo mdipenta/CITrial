@@ -11,6 +11,6 @@ dependencies{
 
 
 
-check.doFirst{
-    println "Variable", System.getenv("FOO")
+assemble.doFirst{
+    println 'Variable', System.getenv('FOO')
 }
