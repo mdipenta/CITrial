@@ -10,7 +10,8 @@ dependencies{
 }
 
 
+foo=ENV['FOO']
 
 assemble.doFirst{
-    println 'Variable', System.getenv('FOO')
+    println 'Variable', foo
 }
