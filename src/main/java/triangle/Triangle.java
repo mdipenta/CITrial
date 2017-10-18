@@ -10,7 +10,7 @@ public class Triangle {
 	};
 	
 	public static TriangleType classify(int a, int b, int c) {
-		int trian; //COmments
+		int trian; //Comment
 		if (a <= 0 || b <= 0 || c <= 0)
 			return TriangleType.INVALID;
 		trian = 0;
