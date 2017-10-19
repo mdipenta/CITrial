@@ -16,7 +16,7 @@ public class TriangleTest {
 	}
 
 	@After
-	public void tearDown() throws Exception {
+	public void tearDown() throws Exception { //go
 	}
 
 	@Test

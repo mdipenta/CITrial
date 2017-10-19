@@ -3,7 +3,7 @@ language: java
 script:
  - if git diff --name-only HEAD^ | grep "test/";
        then gradle test;
-    else if diff --name-only HEAD^ | grep "main/";
+    else if git diff --name-only HEAD^ | grep "main/";
             then gradle compileJava;
          fi
    fi
