@@ -5,5 +5,5 @@ script:
        then gradle test;
     else if diff --name-only HEAD^ | grep "main/";
             then gradle compileJava;
-	 fi
+         fi
 fi
