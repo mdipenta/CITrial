@@ -1,34 +1,30 @@
-buildscript {
-  repositories {
-    maven {
-      url "https://plugins.gradle.org/m2/"
-    }
-  }
-  dependencies {
-    classpath "com.google.guava:guava:+"
-    classpath "gradle.plugin.com.palantir:jacoco-coverage:0.3.0-dirty"
-
-  }
-}
-
 apply plugin: 'java'
-apply plugin: "com.palantir.jacoco-coverage"
+apply plugin: 'jacoco'
+apply plugin: 'findbugs'
+apply plugin: 'pmd'
+apply plugin: 'checkstyle'
 
 repositories {
     mavenCentral()
 }
-
-dependencies{
+dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.2'
-      compile 'com.google.guava:guava:18.0'
 }
 
-jacocoCoverage {
-    // Enforce minimum code coverage of 50% for every Java file.
-    fileThreshold  0.5, LINE
+   findbugs {
+        ignoreFailures = true
+        sourceSets = [sourceSets.main]
+   }
 
-    // Whitelist files named MyClass.java from coverage requirements.
-    //fileThreshold 0.0, "Triangle.java"
+  tasks.withType(FindBugs) {
+    reports {
+        xml.enabled = false
+        html.enabled = true
+    }
 }
 
+checkstyle {
+       configFile = new File(rootDir, "config/checkstyle/checkstyle.xml")
+       toolVersion = '6.17'
+    }
 
