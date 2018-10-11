@@ -6,7 +6,7 @@ public class Triangle {
 		INVALID,
         SCALENE, 
         EQUILATERAL,
-        ISOSCELES; //tmp
+        ISOSCELES; 
 	};
 	
 	public static TriangleType classify(int a, int b, int c) {
