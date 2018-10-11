@@ -1,4 +1,13 @@
 language: java
 
  notifications:
-    slack: sweng-group:vhM1m7KRAv6IRYBmZX6bm7jg
+    slack:
+	sweng-group:vhM1m7KRAv6IRYBmZX6bm7jg
+	on_success: always
+
+  email:
+    recipients:
+      - dipenta@gmail.com
+      - dipenta@unisannio.it
+    on_success: never # default: change
+    on_failure: always # default: always
