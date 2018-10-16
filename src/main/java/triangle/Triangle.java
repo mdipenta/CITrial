@@ -9,7 +9,7 @@ public class Triangle { //
         ISOSCELES; 
 	};
 	
-	public static TriangleType classify(int a, int b, int c) {
+	publi static TriangleType classify(int a, int b, int c) {
         int trian;
 		if (a <= 0 || b <= 0 || c <= 0)
 			return TriangleType.INVALID;
