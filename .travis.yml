@@ -6,3 +6,4 @@ jobs:
        script: gradle compileJava
     - stage: test
       script: gradle test
+ 
