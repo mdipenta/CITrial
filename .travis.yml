@@ -17,6 +17,6 @@ notifications:
 
 
 jobs:
-  include:
+	include:
 	- stage: compile
 	- stage: test
