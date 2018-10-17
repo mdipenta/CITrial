@@ -1,14 +1,5 @@
 language: java
 
-env:
- - FOO=1
- - FOO=2
-
-
-jdk:
-  - oraclejdk8
-  - oraclejdk7
-  - openjdk7
 
 cache:
   directories:
