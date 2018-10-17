@@ -15,10 +15,3 @@ notifications:
     on_success: always #default: change, never
     on_failure: always # default: always
 
-
-jobs:
-  include:
-    - stage: compile
-   # script: ./gradlew compileJava
-    - stage: test
-   # script: ./gradlew test
