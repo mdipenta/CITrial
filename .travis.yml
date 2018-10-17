@@ -1,5 +1,11 @@
 language: java
 
+
+jdk:
+  - oraclejdk8
+  - oraclejdk9
+  - openjdk8
+
 cache:
   directories:
     ~/.gradle/caches/
@@ -15,8 +21,3 @@ notifications:
     on_success: always #default: change, never
     on_failure: always # default: always
 
-
-jdk:
-  - oraclejdk8
-  - oraclejdk9
-  - openjdk8
