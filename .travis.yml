@@ -14,3 +14,11 @@ notifications:
       - dipenta@unisannio.it
     on_success: always #default: change, never
     on_failure: always # default: always
+
+
+jobs:
+  include:
+    - stage: compile
+       script: gradle compileJava
+    - stage: test
+      script: gradle test
