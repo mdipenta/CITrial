@@ -19,6 +19,6 @@ notifications:
 jobs:
   include:
     - stage: compile
-       script: gradle compileJava
+    script: gradle compileJava
     - stage: test
-      script: gradle test
+    script: gradle test
