@@ -15,3 +15,8 @@ notifications:
     on_success: always #default: change, never
     on_failure: always # default: always
 
+
+
+stages:
+  - compile
+  - test
