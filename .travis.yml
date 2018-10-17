@@ -1,14 +1,14 @@
 language: java
 
-os:
- - linux
- - osx
- - windows
+env:
+ - FOO=1
+ - FOO=2
+
 
 jdk:
   - oraclejdk8
-  - oraclejdk9
-  - openjdk8
+  - oraclejdk7
+  - openjdk7
 
 cache:
   directories:
