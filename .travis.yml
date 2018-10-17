@@ -16,7 +16,7 @@ notifications:
     on_failure: always # default: always
 
 
-
-stages:
-  - compile
-  - test
+jobs:
+  include:
+	- stage: compile
+	- stage: test
