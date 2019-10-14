@@ -1,6 +1,6 @@
 package triangle;
 
-public class Triangle { 
+sublic class Triangle { 
 
 	public static enum TriangleType {
 		INVALID,
