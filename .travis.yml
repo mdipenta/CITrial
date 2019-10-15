@@ -1,2 +1,18 @@
 language: java
 
+
+cache:
+  directories:
+    ~/.gradle/caches/
+    ~/.gradle/wrapper/
+
+notifications:
+    slack: sweng-group:vhM1m7KRAv6IRYBmZX6bm7jg
+
+    email:
+     recipients:
+      - dipenta@gmail.com
+      - dipenta@unisannio.it
+    on_success: always #default: change, never
+    on_failure: always # default: always
+
