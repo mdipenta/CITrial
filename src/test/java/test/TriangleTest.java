@@ -10,7 +10,7 @@ import triangle.Triangle;
 import triangle.Triangle.TriangleType;
 
 
-publi class TriangleTest {
+public class TriangleTest {
 
 	@Before
 	public void setUp() throws Exception {
