@@ -1,26 +1,11 @@
 language: java
 
-cache:
-  directories:
-    ~/.gradle/caches/
-    ~/.gradle/wrapper/
-
-notifications:
-    slack: sweng-group:vhM1m7KRAv6IRYBmZX6bm7jg
-
-    email:
-     recipients:
-      - dipenta@gmail.com
-      - dipenta@unisannio.it
-    on_success: always #default: change, never
-    on_failure: always # default: always
+jdk:
+  - oraclejdk9
+  - openjdk8
 
 
-jobs:
-  include:
-  - stage: compile
-    script: gradle compileJava
-  - stage: test
-    script: gradle test
-  - stage: jar
-    script: gradle jar
+env:
+  - FOO=1
+  - FOO=2
+  - FOO=3
