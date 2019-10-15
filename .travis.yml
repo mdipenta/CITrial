@@ -1,6 +1,5 @@
 language: java
 
-
 cache:
   directories:
     ~/.gradle/caches/
@@ -16,3 +15,12 @@ notifications:
     on_success: always #default: change, never
     on_failure: always # default: always
 
+
+jobs:
+  include:
+  - stage: compile
+    script: gradle compileJava
+  - stage: test
+    script: gradle test
+  - stage: jar
+    script: gradle jar
