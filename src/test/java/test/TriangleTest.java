@@ -9,7 +9,7 @@ import org.junit.Test;
 import triangle.Triangle;
 import triangle.Triangle.TriangleType;
 
-// I just added a comment here...
+
 public class TriangleTest {
 
 	@Before
