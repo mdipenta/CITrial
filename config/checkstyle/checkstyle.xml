@@ -22,6 +22,7 @@
     <!-- See http://checkstyle.sf.net/config_whitespace.html -->
         <module name="FileTabCharacter">
           <property name="eachLine" value="true"/>
+          <property name="severity" value="error"/>
         </module>
 
     <module name="TreeWalker">
@@ -102,7 +103,7 @@
             <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9]*$"/>
             <message key="name.invalidPattern"
              value="Parameter name ''{0}'' must match pattern ''{1}''."/>
-              <property name="severity" value="error"/>
+              <property name="severity" value="warning"/>
         </module>
         <module name="CatchParameterName">
             <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9]*$"/>
