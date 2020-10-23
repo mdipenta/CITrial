@@ -1,9 +1,10 @@
 language: java
 
+notifications:
+   email:
+   on_success: always
+
 jobs:
   include:
-    - stage: compile
-       script: gradle compileJava
-    - stage: test
-      script: gradle test
- 
+    if: branch = master
+    script: gradle build
